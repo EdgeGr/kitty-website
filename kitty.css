@@ -1,0 +1,17 @@
+body {
+  background-color: #800020; 
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.kitty {
+  position: absolute;
+  width: 120px;
+  transition: transform 0.1s linear;
+}
+
+/* Just random initial placement */
+.kitty:nth-child(1) { top: 100px; left: 200px; }
+.kitty:nth-child(2) { top: 300px; left: 500px; }
+.kitty:nth-child(3) { top: 200px; left: 800px; }
