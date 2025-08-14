@@ -8,12 +8,20 @@ const meows = [
 ];
 let lastMeow = 0;
 
-// Initialize starting positions
+// Initialize starting positions — now random
 kitties.forEach(kitty => {
-  kittyTargets.push({ 
-    x: kitty.offsetLeft,
-    y: kitty.offsetTop
-  });
+  kitty.style.position = 'absolute';
+
+  const maxX = window.innerWidth - kitty.width;
+  const maxY = window.innerHeight - kitty.height;
+
+  const startX = Math.random() * maxX;
+  const startY = Math.random() * maxY;
+
+  kitty.style.left = startX + 'px';
+  kitty.style.top = startY + 'px';
+
+  kittyTargets.push({ x: startX, y: startY });
 });
 
 // Track mouse movement
